@@ -47,7 +47,7 @@
     <div class="row justify-content-center">
             <div class="col-md-8">
                 <h3>My Whishlist</h3>
-                @foreach($whishlists->chunk(3) as $chunkProduct)
+                    @foreach($whishlists->chunk(3) as $chunkProduct)
                     <div class="row">
                       @foreach($chunkProduct as $whishlist)
                         <div class="col-xs-18 col-sm-6 col-md-3">
@@ -67,10 +67,5 @@
                 @endforeach
             </div>
         </div>
-
-          
-
-
-
                         
 @endsection

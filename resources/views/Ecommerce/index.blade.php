@@ -10,31 +10,32 @@
         </div>
     @endif
 
-        <!--Carousel Wrapper-->
-<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-
-  <div class="carousel-inner" role="listbox">
-   @foreach($ads as $ad)
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="banner/{{$ad->image}}"
-        width="511px" height="340px">
-    </div>
-   @endforeach
-    </div>
+ 
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    @foreach($ads as $key=>$ad)
+        <div class="carousel-item{{ $key == 0 ? ' active' : '' }}">
+          <img class="d-block w-100" src="banner/{{$ad->image}}" height="250px">
+        </div>
+    @endforeach
+    
+    
   </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-  <!--/.Controls-->
 </div>
-<!--/.Carousel Wrapper-->
+
+
+
+
+
+
     
         @foreach($products->chunk(4) as $chunkProduct)
 
