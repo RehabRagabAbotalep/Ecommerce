@@ -31,18 +31,12 @@
   </a>
 </div>
 
-
-
-
-
-
-    
         @foreach($products->chunk(4) as $chunkProduct)
 
             <div class="row">
                 @foreach($chunkProduct as $product)
                     <div class="col-xs-18 col-sm-6 col-md-3">
-                        <div class="thumbnail">
+                        <div class="thumbnail" style="margin-left: 10px;">
                             <a href="{{route('product.show',['id'=>$product->id])}}"><img src="images/{{ $product->image }}" width="150" height="100"></a>
                             <div class="caption">
                                 <h4>{{ $product->name }}</h4>
