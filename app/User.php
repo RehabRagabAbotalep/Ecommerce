@@ -48,10 +48,10 @@ class User extends Authenticatable
         return $this->hasOne(Profile::class);
     }
 
-    //User Review one-to-one relationship
+    //User Review one-to-Many relationship
 
     public function review(){
-        return $this->hasOne(Review::class);
+        return $this->hasMany(Review::class);
     }
 
 
@@ -59,4 +59,11 @@ class User extends Authenticatable
    public function whishlist(){
     return $this->hasOne(Whishlist::class);
    }
+
+   //User Comment one-to-Many relationship
+   public function comment(){
+        return $this->hasMany(Comment::class);
+    }
+
+
 }

@@ -24,6 +24,9 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('/review','UserProductController@storereview')->name('review.store');
             Route::get('/category/products','UserProductController@products')->name('category.product');
             Route::get('/whishlist/{id}','WhishlistController@store')->name('whishlist');
+            Route::get('/reviews/{id}','ReviewController@show')->name('reviews');
+            Route::Post('/comment/store','CommentController@store')->name('comment.store');
+            Route::Post('/reply/store','CommentController@reply')->name('reply.store');
                 });
             
                

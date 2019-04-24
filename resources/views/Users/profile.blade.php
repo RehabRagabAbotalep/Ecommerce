@@ -2,7 +2,7 @@
 @section('content')
 	<div class="row justify-content-center">
             <div class="col-md-8">
-                <h3>My Orders</h3>
+                <h3>Your Orders</h3>
                    
                     
                 <table class="table table-hover table-condensed">
@@ -46,7 +46,7 @@
     <hr>
     <div class="row justify-content-center">
             <div class="col-md-8">
-                <h3>My Whishlist</h3>
+                <h3>Your Whishlist</h3>
                     @foreach($whishlists->chunk(3) as $chunkProduct)
                     <div class="row">
                       @foreach($chunkProduct as $whishlist)

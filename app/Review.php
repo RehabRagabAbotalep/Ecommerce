@@ -18,4 +18,9 @@ class Review extends Model
     public function user(){
     	return $this->belongsTo(User::class);
     }
+
+      public function comment()
+    {
+        return $this->morphMany(Comment::class, 'commentable')->whereNull('parent_id');
+    }
 }

@@ -63,6 +63,6 @@
         </div>
             
         @endforeach
-
+    @include('partial.footer')
     
 @endsection

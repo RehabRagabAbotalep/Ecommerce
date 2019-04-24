@@ -19,7 +19,7 @@
                        <hr>
                        @if(Auth::check())
 
-                        @if($product->review()->where('user_id',Auth::user()->id)->count()>0)
+                        @if($product->review()->where('user_id',Auth::user()->id)->count()>5)
                             <p>Thank You For Your Review!</p>
                             @else
                                 <h6>Please leave your Review</h6>
@@ -38,6 +38,7 @@
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" name="submit" value="Save" class="btn btn-primary">
+                                       <a href="{{route('reviews',['id'=>$product->id])}}" class="btn btn-primary" role="button">Show All Reviews</a>
                                     </div>
                                     <input type="hidden" name="product_id" value="{{$product->id}}">
                                 </form>
